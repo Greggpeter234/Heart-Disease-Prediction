@@ -1,17 +1,17 @@
-# ![My logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 # HEART DISEASE PREDICTION 
 
 ## Overview
--- This project uses a real world clinical datasets from UCI Library to predict the presence of heart disease in patients using Exploratory Data Analysis (EDA), Hypothesis Testing and Logistic Regression Model. The workflow is to perform an ETL (Extract, Transform, Load), create visualizations using Python and associated libraries such as matplotlib, seaborn for static visualisations and plotly was also used to create interactive visualisation. Carry out Hypothesis Testing and Logistic regression Model to predict a Target Variable (Presence of Heart Disease) among various features.
 
+Heart disease refers to a range of conditions affecting the heart. The most common form is coronary artery disease (CAD), which involves narrowing or blockage of the coronary arteries, often leading to heart attacks Common types of heart disease include Coronary Artery Disease (CAD) – Narrowed arteries reduce blood flow to the heart, heart arrhythmias – Irregular heartbeats, congenital heart defects – heart structure problems present at birth, cardiomyopathy – disease of the heart muscle, heart failure – The heart doesn't pump blood as well as it should, heart valvular disease – Valves don't open or close properly. etc Common risk factors are smoking, age,persistent high blood pressure, family history, high cholesterol, Sex (male higher risk), obesity, ethnicity (for example, South Asians at higher risk), diabetes, lack of physical activity and many more.	
 
+This project uses a real world clinical datasets from UCI Library to predict the presence of heart disease in patients using Exploratory Data Analysis (EDA), Hypothesis Testing and Logistic Regression Model. The workflow is to perform an ETL (Extract, Transform, Load), create visualizations using Python and associated libraries such as matplotlib, seaborn for static visualizations and plotly was used to create interactive visualizations.  Hypothesis Testing and Logistic regression Model to predict a Target Variable (Presence of Heart Disease) among various features or key diagnostic metrics.
 
 ## Project Objectives
 
 - Understand the relationships between various clinical features and heart disease.
 - Perform statistical hypothesis testing to validate significant variables
-- Build and evaluate a logistic regression model to predict the likelihood of a heart disease.
+- Build and evaluate a logistic regression model, Random Forest to predict the likelihood of a heart disease.
 
 ## Workflow and Tasks
 
@@ -53,8 +53,9 @@ The original databases have 76 raw attributes or features, only 14 of them are a
 	  Robert Detrano, M.D., Ph.D.
 
 - **Source**: [UCI Heart Disease Dataset] (https://archive.ics.uci.edu/dataset/45/heart+disease) or from Kaggle equivalent.
-- **Target Variable**: 'target' -- 1 (disease present), 0 (no disease)
-- **Clinical features**:
+- **Target Variable**: 'target' -- 1 (heart disease present, 0(no heart disease)
+
+- **Clinical Features**
 Data columns (total 14 columns):
  # Column                Datatype              Description
   
@@ -86,55 +87,57 @@ Data columns (total 14 columns):
 
 
 ## Key Findings
-- 
--
-- 
-
-
+- 1. There is a significant difference in cholesterol levels between people with and without heart disease
+- 2. There is a significant association of sex with heart disease with Males at increased risk
+- 3. There is a significant difference in cholesterol levels across different chest pain types. 
+- 4. There is a significant linear correlation between Age and Cholesterol Levels. 
+- 5. Logistic Regression produced an accuracy of 85.16% for heart disease prediction
+- 6. Random Forest produced an accuracy of 84.07$for heart disease prediction
 ## Project Structure
 
-3. Open heart_disease_prediction.ipynb` in Jupyter Notebook in VS Code IDE.
-4. Run the notebook cells to follow the ETL workflow and view the visualizations.
+- 1. Open heart_disease_prediction.ipynb` in Jupyter Notebook in VS Code IDE.
+- 2. Run the notebook cells to follow the ETL workflow, visualizations and ML Algorithms
+- 3. Open the heart_disease_profiling_report.html to view the ydata profiling report
+
 
 ## Key Steps
 
 1. **Extract:** Load the CSV data using pandas.
 2. **Transform:** Clean missing values, check data types, and preprocess as needed.
 3. **Load:** Store the cleaned data in a DataFrame.
-4. **Visualize:** Generate plots to explore relationships and trends in the data.
+4. **Visualize:** Generate plots to explore relationships and trends in the cleaned datasets.
 
 ## Agile Methodothology
 This is a collaborative and sustainable way of managing projects by breaking the work into small, manageable tasks, delivering results step by step, and improving tasks based on regular feedbacks (Beck, K., et al.(2001). Manifesto for Agile Software Development. [https://agilemanifesto.org]
 
 ## User Story
-As a student Data Analyst, I want to build an ETL pipeline to extract, clean, transform, and load heart_disease_prediction data (including features such as age, sex, BMI, family size, smoking habits, and geographic region) from Kaggle, so that I can perform analysis, create and generate reports on how personal and geographic factors influence insurance costs.
+As a student Data Analyst, I want to build an ETL pipeline to extract, clean, transform, and load heart_disease_prediction datasets (including clinical features such as age, sex, chest pain type, resting systolic blood pressure, cholesterol level, fasting blood sugar, resting ECG, maximum heart rate during exercise, exercise angina (exercise induced chest pain), ST depression, ST slope (electrical abnormalities viewed through the ECG; a heart function test ), Hypertension, family history of coronary artery disease.
 
 ## Tasks
 
 1. **Extract Data**  
-   - Download and extract healthcare insurance data from Kaggle (CSV format) [https://www.kaggle.com/datasets/willianoliveiragibin/healthcare-insurance]
+   - Download and extract heart_disease csv datasets from Kaggle (CSV format) [(https://www.kaggle.com/cherngs/heart-disease-cleveland-uci and UCI Library https://archive.ics.uci.edu/dataset/45/heart+disease
 2. **Clean Data**  
    - Handle missing values (impute or drop as appropriate).
    - Normalize data types and ensure correct formatting of all fields.
 3. **Transform Data**  
-   - Apply business logic to create derived columns (e.g., BMI category).
    - Encode categorical variables for analytics.
 4. **Load Data**  
    - Load the cleaned and transformed data into a Pandas DataFrame.
 5. **Validate & Visualize Data**  
    - Check data quality and consistency (duplicates, nulls, ranges).
    - Perform descriptive statistics and correlation analysis.
-   - Visualize insights, predictive models, and the impact of geographic regions.
+   - Visualize insights and predictive models
 
 ## Acceptance Criteria
 
-### 1. Data Extr+=action
+### 1. Data Extraction
 - 1 The pipeline shall extract raw data from Kaggle and UCI repository in CSV format, including features: age, sex, chest pain type, resting systolic bp, cholesterol, fasting blood sugar, resting ECG, maximum heart rate during exercise, exercise angina, ST depression, ST slope, hypertension, family history of coronary artery disease and the target variabe of heart disease presence or absence.
 - 2 The extraction process must log missing or duplicate records and report extraction success/failure.
 
 ### 2. Data Transformation
-- 1 The pipeline shall clean data by removing duplicates, handling missing values, and standardizing field formats (e.g., sex as ‘Male’/‘Female’).
-- 2 Categorical variables must be encoded for downstream analytics..
+- 1 The pipeline shall clean data by removing duplicates, handling missing values, and standardizing field formats.
+- 2 Categorical variables must be encoded for downstream analytics.
 
 ### 3. Data Loading
 - 1 The data shall be loaded into a Pandas DataFrame following a pre-defined schema.
@@ -155,19 +158,18 @@ As a student Data Analyst, I want to build an ETL pipeline to extract, clean, tr
 
 ## Additional Requirements for Analysis & Reporting
 
-- The pipeline must enable:
+The pipeline must enable:
 - Descriptive statistics.
-- Correlation and visualisation reports between clinical features and heart disease risk.
+- Correlation and visualization reports between clinical features and heart disease risk.
 - Visualization.
+- Prediction models
 
 
 ## Visualizations
-- Distribution of insurance charges
-- Correlation heatmaps
-- Age vs. charges scatter plots
-- Categorical comparisons (e.g., smoker vs. non-smoker)
-- Gegographic factors in relation to healthcare insurance cost [https://greggpeter234.github.io/Individual_Project-1/]
-  
+- Countplot of chest pain types vs target variable (heart disease)
+- Boxplot: Cholesterol Levels vs target variable (heart disease)
+- Linear correlation between Age and Cholesterol Levels?
+- y data profiling report
 ## Credits
 - Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D.
 - University Hospital, Zurich, Switzerland: William Steinbrunn, M.D.
@@ -186,8 +188,8 @@ As a student Data Analyst, I want to build an ETL pipeline to extract, clean, tr
 - My instructors and fellow bootcamp mates at code institute who have been very supportive and helpful through out my journey.
 
 
----
+
+
+
 
 *Created as part of my Data Analytics bootcamp Capstone Project!*
-
-- 
