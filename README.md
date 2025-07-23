@@ -91,8 +91,8 @@ Data columns (total 14 columns):
 - 2. There is a significant association of sex with heart disease with Males at increased risk
 - 3. There is a significant difference in cholesterol levels across different chest pain types. 
 - 4. There is a significant linear correlation between Age and Cholesterol Levels. 
-- 5. Logistic Regression produced an accuracy of 85.16% for heart disease prediction
-- 6. Random Forest produced an accuracy of 84.07$for heart disease prediction
+- 5. Logistic Regression produced an accuracy of 82.58% for heart disease prediction
+- 6. Random Forest produced an accuracy of 83.71% for heart disease prediction
 
 ## Project Structure
 
