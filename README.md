@@ -3,7 +3,7 @@
 
 ## Overview
 
-Heart disease refers to a range of conditions affecting the heart. The most common form is coronary artery disease (CAD), which involves narrowing or blockage of the coronary arteries, often leading to heart attacks Common types of heart disease include Coronary Artery Disease (CAD) – Narrowed arteries reduce blood flow to the heart, heart arrhythmias – Irregular heartbeats, congenital heart defects – heart structure problems present at birth, cardiomyopathy – disease of the heart muscle, heart failure – The heart doesn't pump blood as well as it should, heart valvular disease – Valves don't open or close properly. etc Common risk factors are smoking, age,persistent high blood pressure, family history, high cholesterol, Sex (male higher risk), obesity, ethnicity (for example, South Asians at higher risk), diabetes, lack of physical activity and many more.	
+Heart disease refers to a range of conditions affecting the heart. The most common form is coronary artery disease (CAD), which involves narrowing or blockage of the coronary arteries, often leading to heart attacks. Common types of heart disease include Coronary Artery Disease (CAD) – Narrowed arteries reduce blood flow to the heart, heart arrhythmias – Irregular heartbeats, congenital heart defects – heart structure problems present at birth, cardiomyopathy – disease of the heart muscle, heart failure – The heart doesn't pump blood as well as it should, heart valvular disease – Valves don't open or close properly. etc Common risk factors are smoking, age,persistent high blood pressure, family history, high cholesterol, Sex (male higher risk), obesity, ethnicity (for example, South Asians at higher risk), diabetes, lack of physical activity and many more.	
 
 This project uses a real world clinical datasets from UCI Library to predict the presence of heart disease in patients using Exploratory Data Analysis (EDA), Hypothesis Testing and Logistic Regression Model. The workflow is to perform an ETL (Extract, Transform, Load), create visualizations using Python and associated libraries such as matplotlib, seaborn for static visualizations and plotly was used to create interactive visualizations.  Hypothesis Testing and Logistic regression Model to predict a Target Variable (Presence of Heart Disease) among various features or key diagnostic metrics.
 
@@ -93,6 +93,7 @@ Data columns (total 14 columns):
 - 4. There is a significant linear correlation between Age and Cholesterol Levels. 
 - 5. Logistic Regression produced an accuracy of 85.16% for heart disease prediction
 - 6. Random Forest produced an accuracy of 84.07$for heart disease prediction
+
 ## Project Structure
 
 - 1. Open heart_disease_prediction.ipynb` in Jupyter Notebook in VS Code IDE.
@@ -169,7 +170,20 @@ The pipeline must enable:
 - Countplot of chest pain types vs target variable (heart disease)
 - Boxplot: Cholesterol Levels vs target variable (heart disease)
 - Linear correlation between Age and Cholesterol Levels?
-- y data profiling report
+- y data profiling report open file with a browser
+
+## Data Ethical Considerations
+
+- 1. I minimized data extraction by gathering only the information necessary for the project’s objectives as the original dataset was highly encrypted to the point that the features were hidden in the datasets and i only analyzed and extracted and renamed useful features to my project.
+- 2. I ensured data privacy, security through encryption, secure storage, and access control measures. Whatever sensitive information that will identify patients were either absent or removed like the social security number, names etc.
+- 3. I maintained transparency and accountability by documenting data handling procedures and obtaining ethical approvals. Although the datasets are public, the data collectors requested for some considerations for data usage which i complied with.
+- 4. I addressed fairness and bias by reviewing the dataset for representativeness and avoiding discriminatory analysis.
+- 5. I managed data mining and sharing responsibly using data use agreements that respected patient rights and usage limits. Raw data was encrypted with no sensitive identifiable information.
+- 6. I complied with all legal and regulatory standards, including HIPAA, GDPR, and institutional data policies.
+- 7. I preserved data accuracy and integrity by validating the dataset and reporting findings honestly.
+- 8. I acknowledged and credited the sources of my data including the collectors of the data.
+
+
 ## Credits
 - Hungarian Institute of Cardiology. Budapest: Andras Janosi, M.D.
 - University Hospital, Zurich, Switzerland: William Steinbrunn, M.D.
