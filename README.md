@@ -90,7 +90,7 @@ Data columns (total 14 columns):
 - 1. There is a significant difference in cholesterol levels between people with and without heart disease
 - 2. There is a significant association of sex with heart disease with Males at increased risk
 - 3. There is a significant difference in cholesterol levels across different chest pain types. 
-- 4. There is a significant linear correlation between Age and Cholesterol Levels. 
+- 4. There is a significant linear correlation between Age and Cholesterol Levels and the Age Distribution chart show a strong correlation between Heart Diseases and Cholesterol Level among certain Age groups. 
 - 5. Logistic Regression produced an accuracy of 82.58% for heart disease prediction
 - 6. Random Forest produced an accuracy of 83.71% for heart disease prediction
 
@@ -171,6 +171,21 @@ The pipeline must enable:
 - Boxplot: Cholesterol Levels vs target variable (heart disease)
 - Linear correlation between Age and Cholesterol Levels?
 - y data profiling report open file with a browser
+
+## Dashboard Design
+To create my Power BI dashboard, I followed a structured process to transform clinical data into meaningful visual insights. My dashboard consists of four key visuals, each focused on exploring patterns and risk factors related to heart disease: 
+
+- **Heart Disease and Average Cholesterol Level by Age Distribution**
+I used a stacked column chart to show the distribution of heart disease cases across different age groups, alongside the average cholesterol levels. This helped identify age ranges with higher cholesterol and heart disease prevalence.
+
+- **Heart Disease by Chest Pain Types and Sex**
+I created a clustered column chart to visualize how different types of chest pain (e.g., typical angina, atypical angina) relate to heart disease cases, broken down by sex. This comparison highlighted gender-specific trends in symptom presentation.
+
+- **Correlation Matrix of Heart Disease with Common Features**
+I generated a correlation heatmap using a custom heatmap by powerviz on Power BI. It displayed the strength and direction of relationships between heart disease and variables like age, cholesterol, resting systolic blood pressure, etc. This helped identify which features were most strongly associated.
+
+- **Common Risk Factors of Heart Disease**
+I built a Donut chart with filters to highlight the most frequent risk factors (e.g., Hypertension, exercise angina, fasting blood sugar) among individuals with heart disease.
 
 ## Data Ethical Considerations
 
